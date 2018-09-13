@@ -15,7 +15,7 @@ public class AccountsApplication {
   }
 
   @RestController
-  @CrossOrigin
+  @CrossOrigin(origins = "http://localhost:3000")
   public class MyController {
 
     @GetMapping("hello")
