@@ -24,8 +24,8 @@ public class AccountsApplication {
     CorsConfiguration config = new CorsConfiguration();
 
     config.setAllowCredentials(true);
-    config.addAllowedOrigin("https://accounting-kpociot.herokuapp.com/");
-    config.addAllowedOrigin("http://localhost:3000");
+    config.addAllowedOrigin("https://accounting-kpociot.herokuapp.com");
+//    config.addAllowedOrigin("http://localhost:3000");
     config.addAllowedHeader("*");
     config.addAllowedMethod("*");
 
@@ -38,7 +38,7 @@ public class AccountsApplication {
   @RestController
   public class MyController {
 
-    @CrossOrigin
+    @CrossOrigin(origins = "https://accounting-kpociot.herokuapp.com")
     @GetMapping("hello")
     public Mono<String> getHelloWorld() {
       return Mono.just("Hello World!");
