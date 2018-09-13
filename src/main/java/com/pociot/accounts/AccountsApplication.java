@@ -36,12 +36,9 @@ public class AccountsApplication {
   }
 
   @RestController
-  @CrossOrigin(
-      origins = "*",
-      allowedHeaders = "*"
-  )
   public class MyController {
 
+    @CrossOrigin
     @GetMapping("hello")
     public Mono<String> getHelloWorld() {
       return Mono.just("Hello World!");
