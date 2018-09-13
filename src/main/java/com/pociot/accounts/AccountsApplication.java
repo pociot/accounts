@@ -36,7 +36,7 @@ public class AccountsApplication {
   }
 
   @RestController
-  @CrossOrigin(origins = {"http://localhost:3000", "https://accounting-kpociot.herokuapp.com"})
+//  @CrossOrigin
   public class MyController {
 
     @GetMapping("hello")
