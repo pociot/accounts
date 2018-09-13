@@ -3,7 +3,7 @@ jdk: oraclejdk8
 deploy:
   provider: heroku
   api_key:
-    secure: ${HEROKU_SECRET_KEY_ENCRYPTED}
+    secure: ${HEROKU_SECRET_KEY_ENCRYPTED_ESCAPED}
   app: accounts
   on:
     repo: pociot/accounts
