@@ -38,8 +38,7 @@ public class AccountsApplication {
   @RestController
   @CrossOrigin(
       origins = "*",
-      allowedHeaders = "*",
-      exposedHeaders = "*"
+      allowedHeaders = "*"
   )
   public class MyController {
 
