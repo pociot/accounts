@@ -36,7 +36,11 @@ public class AccountsApplication {
   }
 
   @RestController
-//  @CrossOrigin
+  @CrossOrigin(
+      origins = "*",
+      allowedHeaders = "*",
+      exposedHeaders = "*"
+  )
   public class MyController {
 
     @GetMapping("hello")
