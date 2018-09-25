@@ -1,24 +1,29 @@
 package com.pociot.accounts;
 
-import static org.junit.Assert.*;
-
-import java.util.concurrent.ExecutionException;
+import org.junit.Before;
 import org.junit.Test;
+import org.springframework.test.web.reactive.server.WebTestClient;
 
 public class MyControllerTest {
 
-  private final MyController myController;
+  private static boolean setupCompleted = false;
 
-  public MyControllerTest(MyController myController) {
-    this.myController = myController;
+  private WebTestClient webTestClient;
+
+  @Before
+  public void setUp() {
+    if(!setupCompleted) {
+      webTestClient = WebTestClient.bindToController(MyController.class)
+          .build();
+      setupCompleted = true;
+    }
   }
 
   @Test
   public void getHelloWorld() {
-    try {
-      assertEquals("Hello World!", myController.getHelloWorld().toFuture().get());
-    } catch (InterruptedException | ExecutionException e) {
-      e.printStackTrace();
-    }
+    webTestClient.get().uri("/hello")
+        .exchange()
+        .expectStatus().isOk()
+        .expectBody(String.class).isEqualTo("Hello World!");
   }
 }
