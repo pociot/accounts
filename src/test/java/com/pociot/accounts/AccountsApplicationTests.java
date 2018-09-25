@@ -13,5 +13,4 @@ public class AccountsApplicationTests {
   public void contextLoads() {
     AccountsApplication.main(new String[] {});
   }
-
 }
