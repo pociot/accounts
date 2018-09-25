@@ -11,5 +11,6 @@ public class AccountsApplicationTests {
 
   @Test
   public void contextLoads() {
+    AccountsApplication.main(new String[] {});
   }
 }

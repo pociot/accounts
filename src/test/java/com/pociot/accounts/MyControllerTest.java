@@ -21,7 +21,7 @@ public class MyControllerTest {
 
   @Test
   public void getHelloWorld() {
-    webTestClient.get().uri("/hello")
+    webTestClient.get().uri("/api/v1/hello")
         .exchange()
         .expectStatus().isOk()
         .expectBody(String.class).isEqualTo("Hello World!");
