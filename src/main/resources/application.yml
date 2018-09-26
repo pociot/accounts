@@ -4,7 +4,7 @@ spring:
 
 eureka:
   instance:
-    prefer-ip-address: true
+    prefer-ip-address: false
   client:
     serviceUrl:
       defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
