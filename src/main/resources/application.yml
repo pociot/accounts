@@ -10,6 +10,8 @@ eureka:
     statusPageUrl: https://${DOMAIN_NAME}/info
     healthCheckUrl: https://${DOMAIN_NAME}/health
     homePageUrl: https://${DOMAIN_NAME}/
+    metadataMap:
+      instanceId: ${spring.application.name}
   client:
     serviceUrl:
       defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
