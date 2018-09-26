@@ -11,8 +11,8 @@ import reactor.core.publisher.Mono;
 public class MyController {
 
   @CrossOrigin(origins = {
-      "https://accounting-kpociot.herokuapp.com",
-      "http://localhost:3000"
+      "https://hcb-kpociot.herokuapp.com",
+      "http://localhost:8282"
   })
   @GetMapping("hello")
   public Mono<String> getHelloWorld() {
