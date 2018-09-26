@@ -2,6 +2,13 @@ spring:
   application:
     name: hcb-accounts
 
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+
 eureka:
   instance:
     hostname: ${DOMAIN_NAME}
@@ -10,8 +17,7 @@ eureka:
     statusPageUrl: https://${DOMAIN_NAME}/info
     healthCheckUrl: https://${DOMAIN_NAME}/health
     homePageUrl: https://${DOMAIN_NAME}/
-    metadataMap:
-      instanceId: ${spring.application.name}
+    instance-id: ${spring.application.name}
   client:
     serviceUrl:
       defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
