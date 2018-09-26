@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: hcb-accounts
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
