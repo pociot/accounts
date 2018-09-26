@@ -5,6 +5,8 @@ spring:
 eureka:
   instance:
     hostname: ${DOMAIN_NAME}
+    secure-port: 443
+    secure-port-enabled: true
   client:
     serviceUrl:
       defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
