@@ -7,9 +7,9 @@ eureka:
     hostname: ${DOMAIN_NAME}
     non-secure-port-enabled: false
     secure-port-enabled: true
-    statusPageUrl: https://${eureka.instance.hostName}/info
-    healthCheckUrl: https://${eureka.instance.hostName}/health
-    homePageUrl: https://${eureka.instance.hostName}/
+    statusPageUrl: https://${DOMAIN_NAME}/info
+    healthCheckUrl: https://${DOMAIN_NAME}/health
+    homePageUrl: https://${DOMAIN_NAME}/
   client:
     serviceUrl:
       defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
