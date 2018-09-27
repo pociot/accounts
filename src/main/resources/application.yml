@@ -12,7 +12,7 @@ eureka:
     non-secure-port: 80
   client:
     serviceUrl:
-      defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
+      defaultZone: https://hcb-eureka-kpociot.herokuapp.com/eureka/
 
 logging:
   level:
