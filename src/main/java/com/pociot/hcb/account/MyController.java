@@ -1,4 +1,4 @@
-package com.pociot.accounts;
+package com.pociot.hcb.account;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

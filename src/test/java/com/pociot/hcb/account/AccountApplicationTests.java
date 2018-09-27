@@ -1,5 +1,6 @@
-package com.pociot.accounts;
+package com.pociot.hcb.account;
 
+import com.pociot.hcb.account.AccountApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,10 +8,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class AccountsApplicationTests {
+public class AccountApplicationTests {
 
   @Test
   public void contextLoads() {
-    AccountsApplication.main(new String[] {});
+    AccountApplication.main(new String[] {});
   }
 }
