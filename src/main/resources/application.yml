@@ -1,6 +1,16 @@
-spring:
-  application:
-    name: hcb-accounts
+eureka:
+  instance:
+    hostname: ${DOMAIN_NAME}
+    non-secure-port-enabled: false
+    secure-port-enabled: true
+    statusPageUrl: https://${DOMAIN_NAME}/actuator/info
+    healthCheckUrl: https://${DOMAIN_NAME}/actuator/health
+    secure-health-check-url: https://${DOMAIN_NAME}/actuator/health
+    homePageUrl: https://${DOMAIN_NAME}/
+    instance-id: ${DOMAIN_NAME}
+  client:
+    serviceUrl:
+      defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
 
 logging:
   level:
@@ -9,16 +19,6 @@ logging:
     org.springframework.web.reactive: DEBUG
     reactor.ipc.netty: DEBUG
 
-eureka:
-  instance:
-    hostname: ${DOMAIN_NAME}
-    non-secure-port-enabled: false
-    secure-port-enabled: true
-    statusPageUrl: https://${DOMAIN_NAME}/info
-    healthCheckUrl: https://${DOMAIN_NAME}/health
-    secure-health-check-url: https://${DOMAIN_NAME}/health
-    homePageUrl: https://${DOMAIN_NAME}/
-    instance-id: ${DOMAIN_NAME}
-  client:
-    serviceUrl:
-      defaultZone: https://eureka-kpociot.herokuapp.com/eureka/
+spring:
+  application:
+    name: hcb-accounts
