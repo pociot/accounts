@@ -24,4 +24,4 @@ logging:
 
 spring:
   application:
-    name: hcb-accounts
+    name: hcb-account-service
