@@ -14,6 +14,7 @@ eureka:
 
 logging:
   level:
+    org.springframework.cloud.netflix: DEBUG
     org.springframework.cloud.gateway: DEBUG
     org.springframework.http.server.reactive: DEBUG
     org.springframework.web.reactive: DEBUG
