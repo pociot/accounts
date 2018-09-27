@@ -1,6 +1,5 @@
 package com.pociot.hcb.account;
 
-import com.pociot.hcb.account.MyController;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.test.web.reactive.server.WebTestClient;

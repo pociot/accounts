@@ -1,6 +1,5 @@
 package com.pociot.hcb.account;
 
-import com.pociot.hcb.account.AccountApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
