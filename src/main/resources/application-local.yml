@@ -2,8 +2,14 @@ eureka:
   instance:
     prefer-ip-address: true
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:8080/eureka/
+
+feign:
+  hystrix:
+    enabled: true
 
 server:
   port: 8181
@@ -11,3 +17,14 @@ server:
 spring:
   application:
     name: hcb-account-service
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://hcb-auth-service:8383/auth/users/current
+    client:
+      clientId: hcb-account-service
+      clientSecret: ${ACCOUNT_SERVICE_PASSWORD:password}
+      accessTokenUri: http://hcb-auth-service:8383/auth/oauth/token
+      grant-type: client_credentials
+      scope: server

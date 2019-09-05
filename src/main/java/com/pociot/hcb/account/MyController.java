@@ -14,7 +14,7 @@ public class MyController {
       "https://hcb-kpociot.herokuapp.com",
       "http://localhost:8282"
   })
-  @GetMapping("hello")
+  @GetMapping("/hello")
   public Mono<String> getHelloWorld() {
     return Mono.just("Hello World!");
   }
